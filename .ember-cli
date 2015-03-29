@@ -5,5 +5,7 @@
 
     Setting `disableAnalytics` to true will prevent any data from being sent.
   */
-  "disableAnalytics": false
+  "disableAnalytics": true,
+  "environment": "development",
+  "proxy": "http://localhost:3060"
 }

@@ -1,0 +1,56 @@
+{
+  "app/models/*.js": {
+    "command": "model",
+    "template": [ "export default DS.Model.extend({", "});" ],
+    "alternate": "adapter"
+  },
+  "app/adapters/*.js": {
+    "command": "adapter",
+    "template": [ "export default DS.ActiveModelAdapter.extend({", "  namespace: '/v1'", "});" ],
+    "alternate": "serializer"
+  },
+  "app/serializer/*.js": {
+    "command": "serializer",
+    "template": [ "export default DS.ActiveModelSerializer.extend({", "});" ],
+    "alternate": "model"
+  },
+  "app/routes/*.js": {
+    "command": "route",
+    "template": [ "export default Ember.Route.extend({", "});" ],
+    "alternate": "app/controllers/{}.js"
+  },
+  "app/controllers/*.js": {
+    "command": "controller",
+    "template": [ "export default Ember.Controller.extend({", "});" ],
+    "alternate": "app/templates/{}.hbs"
+  },
+  "app/views/*.js": {
+    "command": "view",
+    "template": [ "export default Ember.View.extend({", "});" ]
+  },
+  "app/helpers/*.js": {
+    "command": "helper",
+    "template": [ "export default Ember.Handlebars.makeBoundHelper(function(){", "});" ]
+  },
+  "app/templates/*.hbs": {
+    "command": "template",
+    "template": [ "{{outlet}}" ],
+    "alternate": "app/controllers/{}.js"
+  },
+  "app/components/*.js": {
+    "command": "component",
+    "template": [ "export default Ember.Component.extend({", "});" ],
+    "alternate": "app/templates/components/{}.js"
+  },
+  "app/initializers/*.js": {
+    "command": "initializer",
+    "template": [ "export default {", "  name: '{}',", "  initialize: function(container, app) {", "  }", "};" ]
+  },
+  "Brocfile.js": { "command": "brocfile"},
+  "app/router.js": { "command": "router"},
+  "app/styles/*.less": { "command": "less" },
+  "app/index.html": { "command": "index" },
+  "bower.json": { "command": "bower" },
+  "package.json": { "command": "package" },
+  "README.md": { "command": "readme" }
+}
