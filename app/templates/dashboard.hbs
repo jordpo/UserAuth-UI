@@ -1,0 +1,9 @@
+{{#if session.isAuthenticated}}
+  <h2>Signed in!</h2>
+  <a href='#' {{action 'invalidateSession'}}>Sign Out</a>
+{{else}}
+  <p>Click
+    {{link-to 'here' 'auth.signin'}}
+    to sign in.
+  </p>
+{{/if}}

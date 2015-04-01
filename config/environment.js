@@ -43,5 +43,17 @@ module.exports = function(environment) {
 
   }
 
+  // Simple auth config
+  ENV['simple-auth'] = {
+    authorizer: 'simple-auth-authorizer:oauth2-bearer',
+    routeAfterAuthentication: 'dashboard',
+    routeIfAlreadyAuthenticated: 'dashboard',
+    authenticationRoute: 'auth/signin'
+  };
+
+  ENV['simple-auth-oauth2'] = {
+    serverTokenEndpoint: '/oauth/token'
+  };
+
   return ENV;
 };

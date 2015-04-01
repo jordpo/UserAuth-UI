@@ -1,0 +1,11 @@
+<div>
+  <h1>Sign up</h1>
+
+  <form>
+    <label>Email</label>
+    {{input type='email' value=model.email}}
+    <label>Password</label>
+    {{input type='password' value=model.password}}
+    <button {{action 'save'}}>Save</button>
+  </form>
+</div>

@@ -3,10 +3,9 @@
 
   <form>
     <label>Email</label>
-    {{input type='email' value=model.email}}
+    {{input type='email' value=identification}}
     <label>Password</label>
-    {{input type='password' value=model.password}}
-    <button {{action 'save'}}>Save</button>
+    {{input type='password' value=password}}
+    <button {{action 'authenticate'}}>Sign in</button>
   </form>
 </div>
-
